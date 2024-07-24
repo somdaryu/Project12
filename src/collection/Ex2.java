@@ -46,10 +46,10 @@ class Member {
 		this.memberName = memberName;
 	}
 
-//	@Override
-//	public String toString() {
-//		return "Member [memberId=" + memberId + ", memberName=" + memberName + "]";
-//	}
+	@Override
+	public String toString() {
+		return "Member [memberId=" + memberId + ", memberName=" + memberName + "]";
+	}
 
 	
 }
