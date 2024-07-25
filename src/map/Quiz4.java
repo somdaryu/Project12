@@ -15,16 +15,18 @@ public class Quiz4 {
 		map.put(1001, member1);
 		map.put(1002, member2);
 		map.put(1003, member3);
-
+		
+		//키값은 필요없고 value만 필요할때. values()라는 함수를 쓰면 됨
 		Collection<Student> values = map.values();
 		
 		System.out.println("학생별 총점");
 		for (Student value : values) {
-
-			System.out.print(value.name +" 총점: " + (value.koreanScore + value.mathScore + value.englishScore)+" ");
 			
 			int scoreSum = value.koreanScore + value.mathScore + value.englishScore;
-			System.out.println(scoreSum / 3);
+
+			System.out.print(value.name +" 총점: " + scoreSum +" ");
+			double avg = scoreSum / 3.0;
+			System.out.println("평균: " + avg);
 			
 		}
 		System.out.println();
@@ -35,7 +37,6 @@ public class Quiz4 {
 		int mathSum = 0;
 		int englishSum = 0;
 		
-		
 		Set<Integer> keySet = map.keySet();
 		for(Integer key : keySet) {
 			Student student = map.get(key);
@@ -44,9 +45,9 @@ public class Quiz4 {
 			englishSum = englishSum + student.englishScore;
 		}
 		
-		System.out.println("국어 총점:"+koreanSum);
-		System.out.println("수학 총점:"+mathSum);
-		System.out.println("영어 총점:"+englishSum);
+		System.out.print("국어 총점: "+koreanSum+" 평균: "+(koreanSum / 3.0));
+		System.out.print("수학 총점:"+mathSum+" 평균: "+(mathSum / 3.0));
+		System.out.print("영어 총점:"+englishSum+" 평균: "+(englishSum / 3.0));
 
 	}
 

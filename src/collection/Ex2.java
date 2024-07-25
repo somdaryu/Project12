@@ -50,6 +50,4 @@ class Member {
 	public String toString() {
 		return "Member [memberId=" + memberId + ", memberName=" + memberName + "]";
 	}
-
-	
 }
